@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="admin-dashboard">
+      <h2>Welcome, Admin!</h2>
+      <div class="employee-list">
+        <h3>Employee List</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTableBody">
+            <!-- Employee data will be dynamically inserted here -->
+          </tbody>
+        </table>
+      </div>
+      <div class="add-employee">
+        <h3>Add Employee</h3>
+        <form id="addEmployeeForm">
+          <div class="form-group">
+            <label for="employeeUsername">Username</label>
+            <input type="text" id="employeeUsername" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="employeePassword">Password</label>
+            <input
+              type="password"
+              id="employeePassword"
+              name="password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn">Add Employee</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="add-sales-target">
+      <h3>Add Sales Target</h3>
+      <form id="addSalesTargetForm">
+        <div class="form-group">
+          <label for="employeeId">Employee ID</label>
+          <input type="text" id="employeeId" name="employeeId" required />
+        </div>
+        <div class="form-group">
+          <label for="month">Month (YYYY-MM)</label>
+          <input
+            type="text"
+            id="month"
+            name="month"
+            placeholder="YYYY-MM"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="salesTarget">Sales Target</label>
+          <input type="number" id="salesTarget" name="salesTarget" required />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn">Add Sales Target</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="admin_dashboard.js"></script>
+  </body>
+</html>
