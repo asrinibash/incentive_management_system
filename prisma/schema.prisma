@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("jdbc:mysql://localhost:3306/hyscaler_emp_sales")
+}
+
+model Admin{
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  password String
+}
+
+model Employee{
+  id Int @id @default(autoincrement())
+  name String
+  email String @unique
+  password String
+  targetsales Int @default(0)
+  sales Int @default(0)
+  incentivePercentage Float @default(0.0)
+  bonus Float @default(0.0)
+  holidayPackage Boolean @default(false)
+}
+
+
+// login routes
+// employee login (name,password)
+// admin login (name,password)
+// emplyee list
+// admin sales add 
+
+
