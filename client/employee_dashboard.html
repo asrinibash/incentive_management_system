@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Dashboard</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(189, 250, 250);
+    margin: 0;
+    padding: 0;
+}
+
+.employee-dashboard {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employee-dashboard h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sales-targets,
+.incentives-earned,
+.holiday-package {
+    margin-bottom: 30px;
+}
+
+.sales-targets table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sales-targets th,
+.sales-targets td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.incentives-earned,
+.holiday-package {
+    padding: 10px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+<div class="employee-dashboard">
+    <h2>Welcome, Employee!</h2>
+    <div class="sales-targets">
+        <h3>Monthly Sales Targets</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Sales Target</th>
+                </tr>
+            </thead>
+            <tbody id="salesTargetsTableBody">
+                <!-- Monthly sales targets will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <div class="incentives-earned">
+        <h3>Incentives Earned</h3>
+        <p>Total incentives earned: <span id="totalIncentives">0</span></p>
+    </div>
+    <div class="holiday-package">
+        <h3>Holiday Package</h3>
+        <p>Holiday package details: <span id="holidayPackageDetails">Not eligible</span></p>
+    </div>
+</div>
+
+<script src="employee_dashboard.js"></script>
+</body>
+</html>
